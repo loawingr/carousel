@@ -1,0 +1,181 @@
+.infinitecarousel {
+  width: 100%;
+  position: relative;
+  height:100%;
+  overflow: hidden;
+}
+
+.infinitecarousel .wrapper {
+  width: 100%; /* .infinitecarousel width - (.wrapper margin-left + .wrapper margin-right) */
+  height: 100%;
+  margin: 0;
+}
+
+.infinitecarousel ul a img {
+  border: none;
+}
+.infinitecarousel ul a:hover img, .infinitecarousel ul a:focus img {
+  border: none;
+}
+.infinitecarousel ul a span {
+	display:none;
+}
+.infinitecarousel ul a span{
+	display:inline;
+	position:absolute;
+	background-color:#000;
+	background:rgba(0,0,0,0.6);
+	color:#fff;
+	padding:0.2em 0.7em;
+	left:0;
+	top:70%;
+}
+
+.infinitecarousel .wrapper ul {
+  width: 199999px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: absolute;
+  top: 0;
+}
+
+.infinitecarousel ul li {
+  display:block;
+  float:left;
+  padding: 0;
+  position:relative;
+}
+.infinitecarousel ul li a{
+	display:block;
+}
+
+.infinitecarousel ul li a img {
+  display:block;
+}
+.infinitecarousel .arrow{
+	position:static;
+	height:15px;
+	width:15px;
+	line-height:15px;
+	display:inline-block;
+	margin:0 12px;
+	text-indent: -9999px;
+	cursor: pointer;
+	background:url(carousel-prev.png) no-repeat 2px 2px;
+	-webkit-transition: background-position .3s ease;
+	-moz-transition: background-position .3s ease;
+	-o-transition: background-position .3s ease;
+	transition: background-position .3s ease;
+}
+.infinitecarousel .arrow.forward{
+	background-image:url(carousel-next.png);
+}
+.infinitecarousel .arrow:hover, .infinitecarousel .arrow:focus{
+	background-position:2px -11px;
+}
+.infinitecarousel .arrow:focus{
+	outline:0;
+}
+.infinitecarousel .nav ul li.hide{
+	display:none;
+}
+.infinitecarousel .nav{
+	position:static;
+	background:transparent;
+	left:auto;
+	top:auto;
+	height:auto;
+	text-align:center;
+	position:absolute;
+	width:100%;
+	bottom:0;
+}
+.infinitecarousel .nav ul{
+	width:auto;
+	margin:0 auto;
+	padding:5px 0 0;
+	height:auto;
+	display:inline-block;
+	padding:0;
+	margin:0;
+	height:15px;
+	overflow:hidden;
+}
+.infinitecarousel .nav ul li{
+	margin:0;
+	padding:0;
+	float:none;
+	
+	width:15px;
+	height:15px;
+	display:inline-block;
+	overflow:hidden;
+	position:static;
+}	
+.infinitecarousel .nav ul li a, .infinitecarousel .nav.preview ul li a{
+	float:left;
+	
+	padding:0;
+	margin:0;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	overflow:hidden;
+	text-indent:-99999px;
+	display:block;
+	background:url(carousel-buttons.png) no-repeat 2px 2px;
+	-webkit-transition: background-position .3s ease;
+		   -moz-transition: background-position .3s ease;
+		     -o-transition: background-position .3s ease;
+		        transition: background-position .3s ease;
+}
+
+.infinitecarousel .nav ul li a:hover, .infinitecarousel .nav ul li a:focus{
+	background-position:2px -11px;
+}
+.infinitecarousel .nav ul li a.onpage{
+	background-position:2px -24px;
+}
+
+.infinitecarousel .nav.preview ul li a{
+	background-position:0px -230px;
+}
+.infinitecarousel .nav.preview ul li a:hover, .infinitecarousel .nav.preview ul li a:focus, .infinitecarousel .nav.preview ul li a:active{
+	background-position:0px -253px;
+}
+.infinitecarousel .nav.preview ul li a.onpage{
+	background-position:0px -277px;
+}
+.infinitecarousel .nav.preview ul li a{
+	position:relative;
+	overflow:visible;
+}
+.infinitecarousel .nav.preview ul li a img{
+	position:absolute;
+	display:none;
+	top:-80px;
+}
+.infinitecarousel .nav.preview ul li a:hover img{
+	display:block;
+}
+
+
+
+
+
+.infinitecarousel ul a span.topleft{
+	top:20%;
+	left:0;
+}
+.infinitecarousel ul a span.topright{
+	left:auto;
+	right:0;
+	top:20%;
+}
+.infinitecarousel ul a span.botright{
+	left:auto;
+	right:0;
+}

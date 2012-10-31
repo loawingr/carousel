@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <!-- #include virtual="/g/i/header.html"-->
+  <meta charset="utf-8">
+  <title>CBC Carousel</title>
+  <meta name="description" content="Evaluation of YUI3 for a carousel on all platforms." />
+  <meta name="viewport" content="width=device-width" />
+  <script type="text/javascript" src="/i/l/yui/3.4.1/yui/yui-min.js"></script>
+<script type="text/javascript" src="/g/i/loader.js"></script>
+  
+  <link rel="stylesheet" href="carousel.css" type="text/css" media="screen" />
+<style type="text/css">
+	#wrap{
+		width:300px;
+		height:194px;
+	}
+</style>
+</head>
+<body>
+<!-- #include virtual="/g/i/body.html"-->
+<div id="wrap">
+  <div id="content" class="infinitecarousel">
+  	<div class="wrapper" style="overflow:hidden;">
+	<ul>
+	<li><a href="/"><img src="gfx/940-james-heat-4col.jpg" alt=""/><span class="desc">Number 1</span></a></li>
+	<li><a href="/"><img src="gfx/lebron-james-120621-4col.jpg" alt=""/><span class="desc">Number 2</span></a></li>
+	<li><a href="/"><img src="gfx/thunder-okc-4col.jpg" alt=""/><span class="desc">Number 3</span></a></li>
+	<li><a href="/"><img src="gfx/nash-canada-940-4col.jpg" alt=""/><span class="desc">Number 4</span></a></li>
+	<li><a href="/"><img src="gfx/paul-chris-olympics-4col.jpg" alt=""/><span class="desc">Number 5</span></a></li>
+	</ul>
+	</div>
+  </div>
+</div>
+  <script type="text/javascript">
+  var mods = _CBC_LOADER.modules;
+  if (!mods.new_carousel) mods.new_carousel = { type:'js', fullpath:'/carousel-poc/carousel-min.js', requires: ['cbc_core','node-base','node-event-delegate','anim-base', 'anim-easing','event-custom','event-move','node-event-delegate'] };
+  
+YUI(_CBC_LOADER).use('new_carousel', function(Y,result) {
+	var conf ={ parentid:"content", navigation:true, duration:0.3, responsive:true };
+    var instance_name = 'carousel'+Math.floor(Math.random()*999999);
+    var instance = CBC.namespace('CBC.APP')[instance_name] = new InfiniteCarousel();
+    CBC.APP.Instances.add(instance_name,instance);
+    instance.init(Y,conf);
+});
+</script>
+<!-- #include virtual="/g/i/footer.html"-->
+</body>
+</html>
